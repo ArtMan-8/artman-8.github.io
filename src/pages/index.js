@@ -8,7 +8,12 @@ import Projects from "../components/projects"
 import Blogs from "../components/blogs"
 
 const Index = () => {
-  return <h2>index page</h2>
+  return (
+    <Layout>
+      <Hero />
+      <Services />
+    </Layout>
+  )
 }
 
 export default Index
