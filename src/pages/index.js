@@ -12,6 +12,7 @@ const Index = () => {
     <Layout>
       <Hero />
       <Services />
+      <Jobs />
     </Layout>
   )
 }
