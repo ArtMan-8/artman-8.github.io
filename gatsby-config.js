@@ -3,6 +3,7 @@ module.exports = {
     author: "Владимир Артюхов",
     title: "Владимир Артюхов",
     description: "Сайт-портфолио frontend разработчика",
+    siteUrl: "https://artman-8.github.io/",
   },
   plugins: [
     `gatsby-transformer-sharp`,
