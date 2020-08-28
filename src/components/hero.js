@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="underline"></div>
             <h1>Владимир</h1>
             <h4>Frontend Developer</h4>
-            <a href="mailto:mail@example.com" className="btn">
+            <a href="mailto:artman888@gmail.com" className="btn">
               Связаться
             </a>
             <SocialLinks />
