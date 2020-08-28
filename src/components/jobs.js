@@ -1,32 +1,10 @@
 import React from "react"
 import Title from "./title"
 import { FaAngleDoubleRight } from "react-icons/fa"
-import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
+import jobs from "../content/jobs"
 
-const query = graphql`
-  {
-    allStrapiJobs(sort: { fields: strapiId, order: DESC }) {
-      nodes {
-        strapiId
-        company
-        date
-        position
-        desc {
-          id
-          name
-        }
-      }
-    }
-  }
-`
-
-const Jobs = () => {
-  const data = useStaticQuery(query)
-  const {
-    allStrapiJobs: { nodes: jobs },
-  } = data
-
+export default function Jobs() {
   const [value, setValue] = React.useState(0)
   const { company, position, date, desc } = jobs[value]
 
@@ -37,7 +15,7 @@ const Jobs = () => {
         <div className="btn-container">
           {jobs.map((job, index) => (
             <button
-              key={job.strapiId}
+              key={job.id}
               onClick={() => setValue(index)}
               className={`job-btn ${index === value && "active-btn"}`}
             >
@@ -60,10 +38,8 @@ const Jobs = () => {
       </div>
 
       <Link to="/about" className="btn center-btn">
-        more info
+        О себе
       </Link>
     </section>
   )
 }
-
-export default Jobs

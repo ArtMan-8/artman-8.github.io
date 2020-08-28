@@ -1,48 +1,32 @@
 import React from "react"
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Title from "../components/title"
 import Image from "gatsby-image"
 import SEO from "../components/seo"
+import about from "../content/about"
 
-export const query = graphql`
-  {
-    allStrapiAbout {
-      nodes {
-        stack {
-          title
-          id
-        }
-        title
-        info
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-const About = ({ data }) => {
+export default function About() {
   const {
-    allStrapiAbout: { nodes },
-  } = data
+    file: {
+      childImageSharp: { fluid },
+    },
+  } = useStaticQuery(queryHeroPhoto)
 
-  const { info, stack, title, image } = nodes[0]
+  const { info, stack, title } = about
 
   return (
     <Layout>
-      <SEO title="About" description="about me" />
+      <SEO title="Инфо |" description="Немного о себе" />
       <section className="about-page">
-        <div className="section-center about center">
-          <Image fluid={image.childImageSharp.fluid} className="about-img" />
+        <div className="section-center about-center">
+          <Image fluid={fluid} className="about-img" />
           <article className="about-text">
             <Title title={title} />
-            <p>{info}</p>
+            {info.map(item => (
+              <p key={item.id}>{item.desc}</p>
+            ))}
+
             <div className="about-stack">
               {stack.map(item => (
                 <span key={item.id}>{item.title}</span>
@@ -55,4 +39,14 @@ const About = ({ data }) => {
   )
 }
 
-export default About
+const queryHeroPhoto = graphql`
+  {
+    file(relativePath: { eq: "hero.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

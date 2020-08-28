@@ -3,7 +3,7 @@ import Links from "../constants/links"
 import SocialLinks from "../constants/social-links"
 import { FaTimes } from "react-icons/fa"
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+export default function Sidebar({ isOpen, toggleSidebar }) {
   return (
     <aside className={`sidebar ${isOpen ? "show-sidebar" : ""}`}>
       <button className="close-btn" onClick={toggleSidebar}>
@@ -17,5 +17,3 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     </aside>
   )
 }
-
-export default Sidebar

@@ -1,27 +1,14 @@
 import React from "react"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/social-links"
 
-const query = graphql`
-  {
-    file(relativePath: { eq: "hero-img.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
-
-const Hero = () => {
+export default function Hero() {
   const {
     file: {
       childImageSharp: { fluid },
     },
-  } = useStaticQuery(query)
+  } = useStaticQuery(queryHero)
 
   return (
     <header className="hero">
@@ -29,11 +16,11 @@ const Hero = () => {
         <article className="hero-info">
           <div>
             <div className="underline"></div>
-            <h1>Vladimir</h1>
+            <h1>Владимир</h1>
             <h4>Frontend Developer</h4>
-            <Link to="/contact" className="btn">
-              contact me
-            </Link>
+            <a href="mailto:mail@example.com" className="btn">
+              Связаться
+            </a>
             <SocialLinks />
           </div>
         </article>
@@ -43,4 +30,14 @@ const Hero = () => {
   )
 }
 
-export default Hero
+const queryHero = graphql`
+  {
+    file(relativePath: { eq: "hero.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

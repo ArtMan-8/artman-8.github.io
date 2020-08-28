@@ -3,19 +3,20 @@ import Layout from "../components/layout"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 
-const Error = () => {
+export default function Error() {
   return (
     <Layout>
+      <SEO title="404 |" description="Ууупс, страница не найдена" />
       <main className="error-page">
         <div className="error-container">
-          <h1>oops it`s dead end</h1>
+          <h2>Ууупс, такой страницы нет</h2>
+          <br />
+          <br />
           <Link to="/" className="btn">
-            back home
+            На главную
           </Link>
         </div>
       </main>
     </Layout>
   )
 }
-
-export default Error

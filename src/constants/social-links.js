@@ -34,7 +34,7 @@ const links = data.map(link => {
   )
 })
 
-export default ({ styleClass }) => {
+export default function SocialLinks({ styleClass }) {
   return (
     <ul className={`social-links ${styleClass ? styleClass : ""}`}>{links}</ul>
   )

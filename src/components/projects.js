@@ -3,7 +3,7 @@ import Title from "./title"
 import Project from "./project"
 import { Link } from "gatsby"
 
-const Projects = ({ projects, title, showLink }) => {
+export default function Projects({ projects, title, showLink }) {
   return (
     <section className="section projects">
       <Title title={title} />
@@ -15,11 +15,9 @@ const Projects = ({ projects, title, showLink }) => {
 
       {showLink && (
         <Link to="/projects" className="btn center-btn">
-          Projects
+          Больше работ
         </Link>
       )}
     </section>
   )
 }
-
-export default Projects

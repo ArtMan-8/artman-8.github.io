@@ -1,10 +1,10 @@
+import "../css/main.css"
 import React from "react"
-// import "../css/main.css"
 import Navbar from "./navbar"
 import Sidebar from "./sidebar"
 import Footer from "./footer"
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   const [isOpen, setIsOpne] = React.useState(false)
   const toggleSidebar = () => setIsOpne(!isOpen)
 
@@ -17,5 +17,3 @@ const Layout = ({ children }) => {
     </>
   )
 }
-
-export default Layout
