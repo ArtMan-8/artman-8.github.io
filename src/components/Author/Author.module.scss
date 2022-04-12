@@ -1,0 +1,107 @@
+.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: center;
+
+	width: 100%;
+	padding: 1rem;
+
+	background-color: #D2FBFF;
+}
+
+.main {
+	display: grid;
+	align-items: center;
+
+	justify-content: center;
+	gap: 50px;
+
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"author"
+		"info";
+
+	@media (min-width: 780px) {
+		gap: 50px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "info author";
+	}
+}
+
+.author {
+	grid-area: author;
+}
+
+.author img {
+	max-width: 400px;
+	max-height: 400px;
+
+	border-radius: 50%;
+}
+
+.info {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	grid-area: info;
+
+	h1 {
+		margin: 0;
+
+		letter-spacing: 0.2rem;
+
+		color: #0C3A3E;
+
+		font-size: 3rem;
+
+		@media (min-width: 780px) {
+			font-size: 4rem;
+		}
+	}
+
+	h4 {
+		margin: 0;
+		margin-bottom: 20px;
+
+		letter-spacing: 0.2rem;
+
+		color: #3E8086;
+
+		font-size: 1rem;
+	}
+
+	@media (min-width: 780px) {
+		align-items: start;
+	}
+}
+
+.line {
+	width: 5rem;
+	height: 0.25rem;
+
+	background-color: #3A8E95;
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 15px;
+
+	@media (min-width: 780px) {
+		gap: 20px;
+	}
+}
+
+.icon {
+	width: 26px;
+	height: 26px;
+
+	color: #0C3A3E;
+
+	:hover {
+		opacity: 0.6;
+	}
+}

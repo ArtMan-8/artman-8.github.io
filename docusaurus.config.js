@@ -1,13 +1,10 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: "Personal Site",
-	tagline: "Dinosaurs are cool",
+	title: "Владимир Артюхов",
+	tagline: "Персональный сайт",
 	url: "https://your-docusaurus-test-site.com",
 	baseUrl: "/",
 	onBrokenLinks: "throw",
@@ -16,23 +13,20 @@ const config = {
 	organizationName: "ArtMan-8", // Usually your GitHub org/user name.
 	projectName: "artman-8.github.io", // Usually your repo name.
 
+	plugins: ["docusaurus-plugin-sass"],
+
 	presets: [
 		[
 			"classic",
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
-				docs: {
-					sidebarPath: require.resolve("./sidebars.js"),
-					// Please change this to your repo.
-					editUrl: "https://github.com/ArtMan-8/artman-8.github.io",
-				},
-				blog: {
-					showReadingTime: true,
-					// Please change this to your repo.
-					editUrl: "https://github.com/ArtMan-8/artman-8.github.io",
-				},
+				docs: false,
+				// docs: {
+				// 	sidebarPath: require.resolve("./sidebars.js"),
+				// },
+				blog: false,
 				theme: {
-					customCss: require.resolve("./src/css/custom.css"),
+					customCss: [require.resolve("./src/css/custom.scss")],
 				},
 			}),
 		],
@@ -42,74 +36,16 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: "My Site",
-				logo: {
-					alt: "My Site Logo",
-					src: "img/logo.svg",
-				},
-				items: [
-					{
-						type: "doc",
-						docId: "intro",
-						position: "left",
-						label: "Tutorial",
-					},
-					{ to: "/blog", label: "Blog", position: "left" },
-					{
-						href: "https://github.com/facebook/docusaurus",
-						label: "GitHub",
-						position: "right",
-					},
-				],
+				title: "Главная",
 			},
+
 			footer: {
-				style: "dark",
-				links: [
-					{
-						title: "Docs",
-						items: [
-							{
-								label: "Tutorial",
-								to: "/docs/intro",
-							},
-						],
-					},
-					{
-						title: "Community",
-						items: [
-							{
-								label: "Stack Overflow",
-								href: "https://stackoverflow.com/questions/tagged/docusaurus",
-							},
-							{
-								label: "Discord",
-								href: "https://discordapp.com/invite/docusaurus",
-							},
-							{
-								label: "Twitter",
-								href: "https://twitter.com/docusaurus",
-							},
-						],
-					},
-					{
-						title: "More",
-						items: [
-							{
-								label: "Blog",
-								to: "/blog",
-							},
-							{
-								label: "GitHub",
-								href: "https://github.com/facebook/docusaurus",
-							},
-						],
-					},
-				],
-				copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+				copyright: `Copyright © 2020-${new Date().getFullYear()}`,
 			},
+
 			prism: {
-				theme: lightCodeTheme,
-				darkTheme: darkCodeTheme,
+				theme: require("prism-react-renderer/themes/github"),
+				darkTheme: require("prism-react-renderer/themes/dracula"),
 			},
 		}),
 };
