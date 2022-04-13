@@ -1,0 +1,31 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["react", "@typescript-eslint"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"rules": {
+		"semi": ["error", "always"],
+		"quotes": ["error", "single"],
+		"no-undef": "warn",
+		"react/jsx-sort-props": [
+			1,
+			{
+				"shorthandFirst": true,
+				"callbacksLast": true
+			}
+		],
+		"@typescript-eslint/semi": ["warn"]
+	},
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx"],
+			"rules": {
+				"no-undef": "off"
+			}
+		}
+	]
+}
