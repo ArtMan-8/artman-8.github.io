@@ -1,0 +1,31 @@
+# use https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
+name: Build and Deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    name: Build and Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - name: Install dependencies 🔧
+        run: yarn install --frozen-lockfile
+
+      - name: Build website 👷
+        run: yarn build
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TK }}
+          publish_dir: ./build

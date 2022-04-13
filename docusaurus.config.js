@@ -7,11 +7,13 @@ const config = {
 	tagline: 'Персональный сайт',
 	url: 'https://artman-8.github.io/',
 	baseUrl: '/',
+	trailingSlash: true,
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.ico',
 	organizationName: 'ArtMan-8', // Usually your GitHub org/user name.
 	projectName: 'artman-8.github.io', // Usually your repo name.
+	deploymentBranch: 'gh-pages',
 
 	plugins: ['docusaurus-plugin-sass'],
 
