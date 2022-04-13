@@ -3,21 +3,21 @@
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: "Владимир Артюхов",
-	tagline: "Персональный сайт",
-	url: "https://your-docusaurus-test-site.com",
-	baseUrl: "/",
-	onBrokenLinks: "throw",
-	onBrokenMarkdownLinks: "warn",
-	favicon: "img/favicon.ico",
-	organizationName: "ArtMan-8", // Usually your GitHub org/user name.
-	projectName: "artman-8.github.io", // Usually your repo name.
+	title: 'Владимир Артюхов',
+	tagline: 'Персональный сайт',
+	url: 'https://your-docusaurus-test-site.com',
+	baseUrl: '/',
+	onBrokenLinks: 'throw',
+	onBrokenMarkdownLinks: 'warn',
+	favicon: 'img/favicon.ico',
+	organizationName: 'ArtMan-8', // Usually your GitHub org/user name.
+	projectName: 'artman-8.github.io', // Usually your repo name.
 
-	plugins: ["docusaurus-plugin-sass"],
+	plugins: ['docusaurus-plugin-sass'],
 
 	presets: [
 		[
-			"classic",
+			'classic',
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
 				docs: false,
@@ -26,7 +26,7 @@ const config = {
 				// },
 				blog: false,
 				theme: {
-					customCss: [require.resolve("./src/css/custom.scss")],
+					customCss: [require.resolve('./src/css/custom.scss')],
 				},
 			}),
 		],
@@ -36,7 +36,7 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: "Главная",
+				title: 'Главная',
 			},
 
 			footer: {
@@ -44,8 +44,8 @@ const config = {
 			},
 
 			prism: {
-				theme: require("prism-react-renderer/themes/github"),
-				darkTheme: require("prism-react-renderer/themes/dracula"),
+				theme: require('prism-react-renderer/themes/github'),
+				darkTheme: require('prism-react-renderer/themes/dracula'),
 			},
 		}),
 };

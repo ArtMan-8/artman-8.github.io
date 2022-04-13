@@ -20,13 +20,13 @@
 
 	grid-template-columns: 1fr;
 	grid-template-areas:
-		"author"
-		"info";
+		'author'
+		'info';
 
 	@media (min-width: 780px) {
 		gap: 50px;
 		grid-template-columns: 1fr 1fr;
-		grid-template-areas: "info author";
+		grid-template-areas: 'info author';
 	}
 }
 

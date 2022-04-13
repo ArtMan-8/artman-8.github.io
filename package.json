@@ -21,7 +21,8 @@
 		"write-translations": "docusaurus write-translations",
 		"write-heading-ids": "docusaurus write-heading-ids",
 		"typecheck": "tsc",
-		"lint:style": "stylelint **/*.scss --fix"
+		"lint:js": "eslint ./src/**/*.{ts,tsx} --fix",
+		"lint:style": "stylelint ./src/**/*.scss --fix"
 	},
 	"dependencies": {
 		"@docusaurus/core": "2.0.0-beta.18",
@@ -36,11 +37,16 @@
 	"devDependencies": {
 		"@docusaurus/module-type-aliases": "2.0.0-beta.18",
 		"@tsconfig/docusaurus": "^1.0.5",
+		"@typescript-eslint/eslint-plugin": "^5.19.0",
+		"@typescript-eslint/parser": "^5.19.0",
 		"docusaurus-plugin-sass": "^0.2.2",
+		"eslint": "^8.13.0",
+		"eslint-plugin-react": "^7.29.4",
+		"prettier": "^2.6.2",
 		"sass": "^1.50.0",
 		"stylelint": "^14.6.1",
 		"stylelint-config-prettier": "^9.0.3",
-		"stylelint-config-standard": "25.0.0",
+		"stylelint-config-standard": "^25.0.0",
 		"stylelint-config-standard-scss": "^3.0.0",
 		"stylelint-order": "^5.0.0",
 		"stylelint-order-config-standard": "^0.1.3",
