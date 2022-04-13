@@ -5,7 +5,7 @@
 const config = {
 	title: 'Владимир Артюхов',
 	tagline: 'Персональный сайт',
-	url: 'https://your-docusaurus-test-site.com',
+	url: 'https://artman-8.github.io/',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
@@ -35,13 +35,13 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			navbar: {
-				title: 'Главная',
-			},
+			// navbar: {
+			// 	title: 'Главная',
+			// },
 
-			footer: {
-				copyright: `Copyright © 2020-${new Date().getFullYear()}`,
-			},
+			// footer: {
+			// 	copyright: `Copyright © 2020-${new Date().getFullYear()} Vladimir Artyukhov`,
+			// },
 
 			prism: {
 				theme: require('prism-react-renderer/themes/github'),
