@@ -15,6 +15,7 @@ export default function Author() {
 					<div className={styles.line} />
 					<h1>Владимир</h1>
 					<h4>Frontend Developer</h4>
+
 					<div className={styles.socials}>
 						<a href="https://career.habr.com/artman-8" rel="noreferrer" target="_blank">
 							<SiHabr className={styles.icon} />
