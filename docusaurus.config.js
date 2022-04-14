@@ -7,7 +7,7 @@ const config = {
 	tagline: 'Персональный сайт',
 	url: 'https://artman-8.github.io/',
 	baseUrl: '/',
-	trailingSlash: true,
+	trailingSlash: false,
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.ico',
@@ -17,16 +17,30 @@ const config = {
 
 	plugins: ['docusaurus-plugin-sass'],
 
+	i18n: {
+		defaultLocale: 'ru',
+		locales: ['ru'],
+		localeConfigs: {
+			ru: {
+				label: 'Russian',
+				direction: 'ltr',
+				htmlLang: 'ru',
+			},
+		},
+	},
+
 	presets: [
 		[
 			'classic',
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
-				docs: false,
 				// docs: {
 				// 	sidebarPath: require.resolve("./sidebars.js"),
 				// },
+				docs: false,
+
 				blog: false,
+
 				theme: {
 					customCss: [require.resolve('./src/css/custom.scss')],
 				},
@@ -37,13 +51,14 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			// navbar: {
-			// 	title: 'Главная',
-			// },
+			navbar: {
+				title: 'Главная',
+				hideOnScroll: true,
+			},
 
-			// footer: {
-			// 	copyright: `Copyright © 2020-${new Date().getFullYear()} Vladimir Artyukhov`,
-			// },
+			footer: {
+				copyright: `Copyright © 2020-${new Date().getFullYear()} Vladimir Artyukhov`,
+			},
 
 			prism: {
 				theme: require('prism-react-renderer/themes/github'),

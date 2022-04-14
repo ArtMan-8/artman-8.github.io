@@ -42,4 +42,13 @@
 
 .main-wrapper {
 	display: flex;
+	overflow: hidden;
+}
+
+.navbar {
+	display: none;
+}
+
+.footer {
+	display: none;
 }
