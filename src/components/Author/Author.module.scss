@@ -1,20 +1,19 @@
 .container {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
 	flex-grow: 1;
+	align-items: center;
 	justify-content: center;
 
 	width: 100%;
 	padding: 1rem;
 
-	background-color: #D2FBFF;
+	background-color: #d2fbff;
 }
 
 .main {
 	display: grid;
 	align-items: center;
-
 	justify-content: center;
 	gap: 50px;
 
@@ -50,10 +49,8 @@
 	h1 {
 		margin: 0;
 
+		color: #0c3a3e;
 		letter-spacing: 0.2rem;
-
-		color: #0C3A3E;
-
 		font-size: 3rem;
 
 		@media (min-width: 780px) {
@@ -62,13 +59,10 @@
 	}
 
 	h4 {
-		margin: 0;
-		margin-bottom: 20px;
+		margin: 0 0 20px;
 
+		color: #3e8086;
 		letter-spacing: 0.2rem;
-
-		color: #3E8086;
-
 		font-size: 1rem;
 	}
 
@@ -81,7 +75,7 @@
 	width: 5rem;
 	height: 0.25rem;
 
-	background-color: #3A8E95;
+	background-color: #3a8e95;
 }
 
 .socials {
@@ -99,7 +93,7 @@
 	width: 26px;
 	height: 26px;
 
-	color: #0C3A3E;
+	color: #0c3a3e;
 
 	:hover {
 		opacity: 0.6;

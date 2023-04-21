@@ -4,7 +4,7 @@
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: 'Владимир Артюхов',
-	tagline: 'Персональный сайт',
+	// tagline: 'vCard',
 	url: 'https://artman-8.github.io/',
 	baseUrl: '/',
 	trailingSlash: false,
