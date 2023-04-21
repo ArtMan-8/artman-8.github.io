@@ -15,14 +15,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-          cache: yarn
+          node-version: 18.x
+          cache: npm
 
       - name: Install dependencies 🔧
-        run: yarn install --frozen-lockfile
+        run: npm i
 
       - name: Build website 👷
-        run: yarn build
+        run: npm run build
 
       - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
